@@ -64,6 +64,9 @@ public abstract class Modifier implements SpecDriven, ContextualTransform {
         STOCK_FUNCTIONS.put( "divide", new Math.divide() );
         STOCK_FUNCTIONS.put( "divideAndRound", new Math.divideAndRound() );
 
+        //start add toJsonString
+        STOCK_FUNCTIONS.put( "toJsonString", new Objects.toJsonString() );
+        //end add toJsonString
 
         STOCK_FUNCTIONS.put( "toInteger", new Objects.toInteger() );
         STOCK_FUNCTIONS.put( "toDouble", new Objects.toDouble() );
@@ -85,6 +88,8 @@ public abstract class Modifier implements SpecDriven, ContextualTransform {
         STOCK_FUNCTIONS.put( "elementAt", new Lists.elementAt() );
         STOCK_FUNCTIONS.put( "toList", new Lists.toList() );
         STOCK_FUNCTIONS.put( "sort", new Lists.sort() );
+
+
     }
 
     private final ModifierCompositeSpec rootSpec;
